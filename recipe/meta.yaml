@@ -17,6 +17,7 @@ build:
     - gtest
   missing_dso_whitelist:
     - $RPATH/ld64.so.*  # [s390x]
+    - $RPATH/libkaldi-native-fbank-core.dylib  # [osx]
 
 requirements:
   build:
