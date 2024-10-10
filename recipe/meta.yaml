@@ -45,6 +45,9 @@ test:
     - kaldi_native_fbank
   commands:
     - pip check
+    - test-log
+    - test-online-fbank
+    - test-rfft
   requires:
     - pip
 
