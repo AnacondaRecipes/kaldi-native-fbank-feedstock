@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - cmake
+    - make # [not win]
     - git  # [not win]
     - patch  # [not win]
     - m2-patch  # [win]
