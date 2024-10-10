@@ -17,6 +17,8 @@ build:
   number: 0
   ignore_run_exports:
     - gtest
+  missing_dso_whitelist:
+    - $RPATH/ld64.so.*  # [s390x]
 
 requirements:
   build:
