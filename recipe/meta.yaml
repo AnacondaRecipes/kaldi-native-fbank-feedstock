@@ -38,6 +38,7 @@ requirements:
     - gtest
   run:
     - python
+    - gtest
 
 test:
   imports:
