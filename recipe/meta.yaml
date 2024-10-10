@@ -35,8 +35,12 @@ test:
 
 about:
   home: https://github.com/csukuangfj/kaldi-native-fbank
+  summary: Kaldi-compatible online fbank feature extractor without external dependencies.
+  description: Kaldi-compatible online fbank feature extractor without external dependencies.
   license: Apache-2.0
   license_file: LICENSE
+  doc_url: https://github.com/csukuangfj/kaldi-native-fbank
+  dev_url: https://github.com/csukuangfj/kaldi-native-fbank
 
 extra:
   recipe-maintainers:
