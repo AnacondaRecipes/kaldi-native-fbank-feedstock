@@ -46,9 +46,9 @@ test:
     - kaldi_native_fbank
   commands:
     - pip check
-    - test-log
+    - test-log | grep PASSED
     - test-online-fbank
-    - test-rfft
+    - test-rfft | grep PASSED
   requires:
     - pip
 
