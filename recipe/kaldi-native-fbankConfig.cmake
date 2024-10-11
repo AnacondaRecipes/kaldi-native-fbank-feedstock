@@ -13,7 +13,7 @@ set(kaldi-native-fbank_LIB_PATH "${CMAKE_CURRENT_LIST_DIR}/../../libkaldi-native
 
 # Set include paths if necessary (if there are headers to be included, this can point to an include directory)
 # For this example, assume there are no headers. Add if necessary.
-#set(kaldi-native-fbank_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/include")
+set(kaldi-native-fbank_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../include")
 
 # Provide a target for the core library
 if(NOT TARGET kaldi-native-fbank::core)
