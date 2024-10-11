@@ -38,6 +38,7 @@ requirements:
     - gtest
   run:
     - python
+    # part of the targets that are build are test-log, test-online-fbank and test-rfft which link to gtest libraries
     - gtest
 
 test:

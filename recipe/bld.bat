@@ -9,5 +9,4 @@ cmake --build build
 %PYTHON% -m pip install . -v --no-deps --no-build-isolation
 
 # adding test files to package
-mkdir -p %SP_DIR%\kaldi_native_fbank\bin
-xcopy /E %SP_DIR%\build\bin\test-rfft %SP_DIR%\build\bin\test-online-fbank %SP_DIR%\build\bin\test-log ${SP_DIR}\kaldi_native_fbank\bin
+xcopy /E %SP_DIR%\build\bin\test-rfft %SP_DIR%\build\bin\test-online-fbank %SP_DIR%\build\bin\test-log %LIBRARY_BIN%
