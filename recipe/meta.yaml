@@ -10,6 +10,7 @@ source:
   sha256: 4244d0dc5a5d56f1cad6ce0f7486fb83b4871a2f2f5ee37ca4879ef56701e798
   patches:
     - 0001-unvendor-gtest-and-pybind11.patch
+    - 0002-install-cmake-config-for-package.patch
 
 build:
   number: 0
