@@ -9,4 +9,4 @@ cmake --build build
 %PYTHON% -m pip install . -v --no-deps --no-build-isolation
 
 # adding test files to package
-xcopy /E %SP_DIR%\build\bin\test-rfft %SP_DIR%\build\bin\test-online-fbank %SP_DIR%\build\bin\test-log %LIBRARY_BIN%
+xcopy /E %SRC_DIR%\build\bin\test-rfft %SRC_DIR%\build\bin\test-log %LIBRARY_BIN%

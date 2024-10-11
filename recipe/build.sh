@@ -10,5 +10,4 @@ cmake --build build --target install
 $PYTHON -m pip install . -v --no-deps --no-build-isolation
 
 # adding test files to package
-#mkdir -p ${SP_DIR}/kaldi_native_fbank/bin
 install ${SRC_DIR}/build/bin/test-rfft ${SRC_DIR}/build/bin/test-log $PREFIX/bin
