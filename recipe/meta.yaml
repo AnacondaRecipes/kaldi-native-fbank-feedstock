@@ -69,3 +69,5 @@ about:
 extra:
   recipe-maintainers:
     - boldorider4
+  skip-lints:
+    - pip_install_args
