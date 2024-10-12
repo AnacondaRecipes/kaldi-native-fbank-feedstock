@@ -39,7 +39,7 @@ index 69b7da4..ac90ee4 100644
        kaldi-native-fbank-core
 -      gtest
 -      gtest_main
-+      GTest
++      gtest
 +      GTest::gtest_main
    )
  
