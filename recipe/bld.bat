@@ -8,5 +8,5 @@ cmake --build build
 
 %PYTHON% -m pip install . -v --no-deps --no-build-isolation
 
-# adding test files to package
-xcopy /E %SRC_DIR%\build\bin\test-rfft %SRC_DIR%\build\bin\test-log %LIBRARY_BIN%
+# remove duplicated artifacts from callling cmake and then python -m pip install
+rmdir /s /q ${SP_DIR}/kaldi_native_fbank/include ${SP_DIR}/kaldi_native_fbank/lib
