@@ -1,9 +1,11 @@
 {% set name = "kaldi-native-fbank" %}
 {% set version = "1.17" %}
 
+# version is in format 1.X_Y_ZZZZZZ because the release is based on 1.17 from the main developer
+# but a commit was added from a fork from developer cbalioglu
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: {{ version }}+1_740f131
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
