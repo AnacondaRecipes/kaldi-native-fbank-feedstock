@@ -9,7 +9,7 @@ set(kaldi-native-fbank_VERSION 1.0)
 # "CMAKE_CURRENT_LIST_DIR" refers to the directory containing this config file.
 
 # Set the path to the dynamic library (.dylib)
-set(kaldi-native-fbank_LIB_PATH "${CMAKE_CURRENT_LIST_DIR}/../../libkaldi-native-fbank-core.$ENV{SHLIB_EXT}")
+set(kaldi-native-fbank_LIB_PATH "${CMAKE_CURRENT_LIST_DIR}/../../libkaldi-native-fbank-core$ENV{SHLIB_EXT}")
 
 # Set include paths if necessary (if there are headers to be included, this can point to an include directory)
 # For this example, assume there are no headers. Add if necessary.
