@@ -16,6 +16,8 @@ source:
     - 0003-Update-ExtractWindow-signature.patch
 
 build:
+  # not a must-have, there is a problem with cmake -GNinka not picking up ninja
+  skip: True  # [win]
   number: 0
   ignore_run_exports:
     - gtest
