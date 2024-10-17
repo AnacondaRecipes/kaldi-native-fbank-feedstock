@@ -9,5 +9,5 @@ cmake --build build
 
 %PYTHON% -m pip install . -v --no-deps --no-build-isolation
 
-# remove duplicated artifacts from callling cmake and then python -m pip install
+# remove duplicated artifacts from calling cmake and then python -m pip install
 rmdir /s /q ${SP_DIR}/kaldi_native_fbank/include ${SP_DIR}/kaldi_native_fbank/lib
