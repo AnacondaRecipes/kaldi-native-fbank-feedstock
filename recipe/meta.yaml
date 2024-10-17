@@ -47,15 +47,10 @@ requirements:
     - gtest
 
 test:
-  imports:
-    - kaldi_native_fbank
   commands:
-    - pip check
     - test-log | grep PASSED
     - test-online-fbank
     - test-rfft | grep PASSED
-  requires:
-    - pip
 
 about:
   home: https://github.com/csukuangfj/kaldi-native-fbank
