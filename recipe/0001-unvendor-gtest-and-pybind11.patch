@@ -1,0 +1,49 @@
+From 640ab8c8d5d89ba91d9025f04cb3a0305d4cecb8 Mon Sep 17 00:00:00 2001
+From: Jack Olivieri <jolivieri@anaconda.com>
+Date: Thu, 10 Oct 2024 23:06:58 +0200
+Subject: [PATCH] unvendor gtest and pybind11
+
+---
+ CMakeLists.txt                         | 6 ++++--
+ kaldi-native-fbank/csrc/CMakeLists.txt | 4 ++--
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8d289be..373e438 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -91,12 +91,14 @@ if(WIN32)
+ endif()
+ 
+ if(KALDI_NATIVE_FBANK_BUILD_PYTHON)
+-  include(pybind11)
++  # include(pybind11)
++  find_package(pybind11)
+ endif()
+ 
+ if(KALDI_NATIVE_FBANK_BUILD_TESTS)
+   enable_testing()
+-  include(googletest)
++  # include(googletest)
++  find_package(GTest)
+ endif()
+ 
+ if(NOT CMAKE_INSTALL_PREFIX)
+diff --git a/kaldi-native-fbank/csrc/CMakeLists.txt b/kaldi-native-fbank/csrc/CMakeLists.txt
+index 69b7da4..ac90ee4 100644
+--- a/kaldi-native-fbank/csrc/CMakeLists.txt
++++ b/kaldi-native-fbank/csrc/CMakeLists.txt
+@@ -46,8 +46,8 @@ function(kaldi_native_fbank_add_test source)
+   target_link_libraries(${name}
+     PRIVATE
+       kaldi-native-fbank-core
+-      gtest
+-      gtest_main
++      gtest
++      GTest::gtest_main
+   )
+ 
+   add_test(NAME "Test.${name}"
+-- 
+2.39.5 (Apple Git-154)
+
