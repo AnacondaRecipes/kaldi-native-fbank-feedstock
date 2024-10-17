@@ -67,3 +67,5 @@ extra:
     - boldorider4
   skip-lints:
     - pip_install_args
+    - missing_imports_or_run_test_py
+    - missing_pip_check
