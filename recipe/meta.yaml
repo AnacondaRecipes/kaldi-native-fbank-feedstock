@@ -43,14 +43,10 @@ requirements:
     - gtest 1.14.0
   run:
     - python
-    # part of the targets that are build are test-log, test-online-fbank and test-rfft which link to gtest libraries
-    - gtest
 
 test:
   commands:
-    - test-log | grep PASSED
     - test-online-fbank
-    - test-rfft | grep PASSED
 
 about:
   home: https://github.com/csukuangfj/kaldi-native-fbank

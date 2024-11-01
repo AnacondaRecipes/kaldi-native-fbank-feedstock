@@ -9,3 +9,7 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -GNinja -B build
 
 cmake --build build --target install
+
+# running tests automatically
+$SRC_DIR/build/bin/test-log
+$SRC_DIR/build/bin/test-rfft

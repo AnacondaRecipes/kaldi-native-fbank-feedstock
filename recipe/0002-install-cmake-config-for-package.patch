@@ -1,25 +1,16 @@
-From afb49d24395437109de6dcf07980d5f6e420d7b4 Mon Sep 17 00:00:00 2001
+From efebbcb22b7764271cd6181ada7e53156922bbe3 Mon Sep 17 00:00:00 2001
 From: Jack Olivieri <jolivieri@anaconda.com>
 Date: Sat, 12 Oct 2024 00:18:40 +0200
 Subject: [PATCH] install cmake config for package
 
 ---
- kaldi-native-fbank/csrc/CMakeLists.txt | 7 ++++++-
- 1 file changed, 6 insertions(+), 1 deletion(-)
+ kaldi-native-fbank/csrc/CMakeLists.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/kaldi-native-fbank/csrc/CMakeLists.txt b/kaldi-native-fbank/csrc/CMakeLists.txt
-index b3b7f97..7cabee7 100644
+index b3b7f97..1a49eae 100644
 --- a/kaldi-native-fbank/csrc/CMakeLists.txt
 +++ b/kaldi-native-fbank/csrc/CMakeLists.txt
-@@ -71,7 +71,7 @@ install(TARGETS kaldi-native-fbank-core
- )
- 
- if(KALDI_NATIVE_FBANK_BUILD_TESTS)
--  install(TARGETS test-online-fbank
-+  install(TARGETS test-online-fbank test-rfft test-log
-     DESTINATION bin
-   )
- endif()
 @@ -91,3 +91,8 @@ file(COPY
  install(FILES ${all_headers}
    DESTINATION include/kaldi-native-fbank/csrc
