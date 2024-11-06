@@ -1,0 +1,62 @@
+{% set name = "kaldi-native-fbank" %}
+{% set version = "1.17" %}
+
+# version is in format 1.X_Y_ZZZZZZ because the release is based on 1.17 from the main developer
+# but a commit was added from a fork from developer cbalioglu
+package:
+  name: {{ name|lower }}
+  version: {{ version }}+1_740f131
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b877a6aea7b09f87dfefd9e01106f38221287a2369fcda9221beb6bb76476d5c
+  patches:
+    - 0001-unvendor-gtest-and-pybind11.patch
+    - 0002-install-cmake-config-for-package.patch
+    - 0003-Update-ExtractWindow-signature.patch
+
+build:
+  # not a must-have, there is a problem with cmake -GNinka not picking up ninja
+  skip: True  # [win]
+  number: 0
+  ignore_run_exports:
+    - gtest
+  missing_dso_whitelist:
+    - $RPATH/ld64.so.*  # [s390x]
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - cmake
+    - make # [not win]
+    - ninja
+    - git  # [not win]
+    - patch  # [not win]
+    - m2-patch  # [win]
+  host:
+    - python
+    - pybind11 2.12.0
+    - gtest 1.14.0
+
+test:
+  commands:
+    - test-online-fbank
+
+about:
+  home: https://github.com/csukuangfj/kaldi-native-fbank
+  summary: Kaldi-compatible online fbank feature extractor without external dependencies.
+  description: Kaldi-compatible online fbank feature extractor without external dependencies.
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  doc_url: https://github.com/csukuangfj/kaldi-native-fbank
+  dev_url: https://github.com/csukuangfj/kaldi-native-fbank
+
+extra:
+  recipe-maintainers:
+    - boldorider4
+  skip-lints:
+    - pip_install_args
+    - missing_imports_or_run_test_py
+    - missing_pip_check

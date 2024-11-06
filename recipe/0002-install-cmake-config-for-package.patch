@@ -1,0 +1,26 @@
+From efebbcb22b7764271cd6181ada7e53156922bbe3 Mon Sep 17 00:00:00 2001
+From: Jack Olivieri <jolivieri@anaconda.com>
+Date: Sat, 12 Oct 2024 00:18:40 +0200
+Subject: [PATCH] install cmake config for package
+
+---
+ kaldi-native-fbank/csrc/CMakeLists.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/kaldi-native-fbank/csrc/CMakeLists.txt b/kaldi-native-fbank/csrc/CMakeLists.txt
+index b3b7f97..1a49eae 100644
+--- a/kaldi-native-fbank/csrc/CMakeLists.txt
++++ b/kaldi-native-fbank/csrc/CMakeLists.txt
+@@ -91,3 +91,8 @@ file(COPY
+ install(FILES ${all_headers}
+   DESTINATION include/kaldi-native-fbank/csrc
+ )
++
++# Install the CMake config file
++install(FILES $ENV{RECIPE_DIR}/kaldi-native-fbankConfig.cmake
++        DESTINATION lib/cmake/kaldi-native-fbank)
++message(STATUS "CMAKE_CURRENT_LIST_DIR ${CMAKE_CURRENT_LIST_DIR}")
+\ No newline at end of file
+-- 
+2.39.5 (Apple Git-154)
+
