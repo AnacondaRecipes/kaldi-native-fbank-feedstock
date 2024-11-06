@@ -18,8 +18,6 @@ source:
 build:
   # not a must-have, there is a problem with cmake -GNinka not picking up ninja
   skip: True  # [win]
-  # skip py313
-  skip: True  # [py>312]
   number: 0
   ignore_run_exports:
     - gtest
@@ -39,8 +37,6 @@ requirements:
   host:
     - pybind11 2.12.0
     - gtest 1.14.0
-  run:
-    - python
 
 test:
   commands:
