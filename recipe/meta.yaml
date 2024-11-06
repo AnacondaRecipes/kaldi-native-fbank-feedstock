@@ -36,7 +36,6 @@ requirements:
     - m2-patch  # [win]
   host:
     - python
-    - setuptools
     - pybind11 2.12.0
     - gtest 1.14.0
 
