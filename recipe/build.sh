@@ -1,5 +1,3 @@
-# we need to call cmake first because the `python -m pip install` step does not build dynamic libraries
-# and does not include headers
 cmake -DCMAKE_BUILD_TYPE=Release \
       -DPYTHON_EXECUTABLE=${PREFIX}/bin/python \
       -DKALDI_NATIVE_FBANK_BUILD_TESTS=ON \
